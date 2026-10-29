@@ -1,5 +1,14 @@
 package main
 
+import (
+	"fmt"
+	"strings"
+)
+
 func greet(name string) string {
-	panic("TODO: implement")
+	res := strings.TrimSpace(name)
+	if res == "" {
+		res = "World"
+	}
+	return fmt.Sprintf("Hello, %s!", res)
 }
